@@ -1,6 +1,6 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var point_size = 3
+var point_size = 1.5
 var delay = 0
 //inser : 15000/5 =3000
 //bubb : /5 = 
