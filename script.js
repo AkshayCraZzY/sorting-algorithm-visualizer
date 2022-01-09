@@ -1,7 +1,9 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-
-
+var point_size = 3
+var delay = 0
+//inser : 15000/5 =3000
+//bubb : /5 = 
 
 const createArray = (size) => {
     let elements = [];
@@ -34,6 +36,7 @@ const getHighestValue = (elements) => {
 
 
 const draw = async (elements) => {
+    await sleep(delay);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
     let separationX = innerWidth/elements.length;
     let separationY = innerHeight/getHighestValue(elements);
@@ -43,12 +46,15 @@ const draw = async (elements) => {
         ctx.arc(
             i*separationX,
             innerHeight-elements[i]*separationY,
-            1.5,
+            point_size,
             0, Math.PI*2, true
         );
+        
         ctx.fill();
     }
+    
     return 1;
+    
 }
 
 
@@ -72,7 +78,8 @@ var buttons = document.getElementsByClassName("control-button");
 for (let i = 0; i < buttons.length; ++i) {
     buttons[i].addEventListener('click', () => {
         switch (buttons[i].innerText) {
-            case "SHUFFLE":
+            case "RESET":
+                document.getElementById("buttonss").style.opacity = "1.0";
                 elements = shuffleArray(elements);
                 state.sorting = false;
                 draw(elements);
@@ -80,18 +87,25 @@ for (let i = 0; i < buttons.length; ++i) {
             case "BUBBLE":
                 state.sorting = true;
                 bubbleSort(state, elements, draw);
+                document.getElementById("buttonss").style.opacity = "0.3";
                 break;
             case "INSERTION":
                 state.sorting = true;
                 insertionSort(state, elements, draw);
+                document.getElementById("buttonss").style.opacity = "0.3";
                 break;
             case "SELECTION":
                 state.sorting = true;
+                document.getElementById("buttonss").style.opacity = "0.3";
                 selectionSort(state, elements, draw);
                 break;
             case "MERGE":
                 state.sorting = true;
-                mergeSort(state, elements, draw);
+                mergeSort(state, elements, draw);;
+                break;
+            case "GITHUB":
+                state.sorting = false;
+                window.open("https://github.com/AkshayCraZzY");
                 break;
         }
     });
