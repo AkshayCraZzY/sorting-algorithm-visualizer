@@ -14,4 +14,4 @@
 <h2>Selection</h2>
 <img src="./previews/selection.gif">
 <br/>
-<h2 align="center"><a href="https://jayexdesigns.github.io/sorting-algorithm-visualizer/">TRY IT!</a></h2>
+<h2 align="center"><a href="https://akshaycrazzy.github.io/sorting-algorithm-visualizer/">TRY IT!</a></h2>
