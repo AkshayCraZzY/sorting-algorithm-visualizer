@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,20 +12,33 @@
     <link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
     <title>Sorting Algorithm Visualizer</title>
 </head>
+
 <body>
+    
+    <div id="git">
+        <button class="control-button">GITHUB</button>
+    </div>
     <div id="controls">
         <div id="buttons">
-            <button class="control-button">SHUFFLE</button>
-            <button class="control-button">BUBBLE</button>
-            <button class="control-button">INSERTION</button>
-            <button class="control-button">SELECTION</button>
-            <button class="control-button">MERGE</button>
+            <button class="control-button">RESET</button>
+            <div id="buttonss">
+                
+                <button class="control-button">BUBBLE</button>
+                <button class="control-button">INSERTION</button>
+                <button class="control-button">SELECTION</button>
+                <button class="control-button">MERGE</button>
+            </div>
         </div>
-        <input id="element-quantity" type="number" placeholder="ELEMENTS" value="250">
+
+            <input id="element-quantity" type="number" placeholder="ELEMENTS" value="100">
+           
+   
     </div>
+    
     <canvas id="canvas"></canvas>
     <script src="functions.js"></script>
     <script src="sort.js"></script>
     <script src="script.js"></script>
+    <div class="body"></div>
 </body>
 </html>
