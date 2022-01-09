@@ -46,7 +46,7 @@ const draw = async (elements) => {
         ctx.arc(
             i*separationX,
             innerHeight-elements[i]*separationY,
-            point_size,
+            1.5,
             0, Math.PI*2, true
         );
         
